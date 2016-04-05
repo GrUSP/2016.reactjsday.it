@@ -1,0 +1,27 @@
+---
+layout: react
+title: ReactJS Day
+ttl: ReactJS Day
+conf_data: "VERONA - OCTOBER 30, 2015"
+cfp: false
+cfp_url: https://docs.google.com/a/grusp.org/forms/d/1Mq6ZJ1N2TaNrLk7e_X1OhH2mKQHKCnlZTgdRvbmc48Q/viewform
+speakers: true
+cfs: true
+where: veneto
+tickets: true
+tickets_url: //eventbrite.com/tickets-external?eid=17120086640&ref=etckt
+---
+
+{% include section-newsletter.html %}
+{% include section-contents.html %}
+
+{% if page.cfp %} {% include section-cfp.html %} {% endif %}
+{% if page.tickets %} {% include section-tickets.html %} {% endif %}
+{% if page.speakers %} {% include section-speakers.html %} {% endif %}
+
+{% if page.where %}
+{% capture place %}{{'places/'}}{{page.where}}{{'.html'}}{% endcapture %}
+
+{% include {{place}} %}
+{% endif %}
+{% include section-sponsors.html %}
